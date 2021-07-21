@@ -21,16 +21,16 @@ NeuralSystem include the neural network (xor for now)
 # Français
 Ce projet est compilable sur Linux avec la librairie sdl2 installée.  
 
-Pour compiler le projet: $ make
-Pour clean le projet : $make clean
+Pour compiler le projet: $ make  
+Pour clean le projet : $make clean  
 
-.\main pour lancer le projet,
-Usage: main [OPTION]
-Options:
+.\main pour lancer le projet,  
+Usage: main [OPTION]  
+Options:  
 * XOR -> XOR training
 * Image "File.bmp" -> Image tests
 * Cut -> Cuts matrix tests
 
-CharDetecor comprend la gestion du découpage de l'image
-IMGtreatment comprend le traitement de l'image
-NeuralSystem comprend le systeme de neurones (le xor pour l'instant)
+CharDetecor comprend la gestion du découpage de l'image  
+IMGtreatment comprend le traitement de l'image  
+NeuralSystem comprend le systeme de neurones (le xor pour l'instant)  
