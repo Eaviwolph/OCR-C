@@ -2,11 +2,11 @@
 
 CC = gcc
 CPPFLAGS = -MMD
-CFLAGS = -Wall -Wextra -std=c99 -O0 -g
+CFLAGS = `pkg-config --cflags gtk+-3.0` -Wall -Wextra -std=c99 -O0 -g 
 LDFLAGS =
-LDLIBS = -lm `sdl2-config --cflags --libs` -lSDL_image
+LDLIBS = `pkg-config --libs gtk+-3.0` `sdl2-config --cflags --libs` -lSDL_image -lm
 
-OBJ = CharDetector/CharBlockDetector.o IMGtreatment/LoadIm.o NeuralSystem/NeuralTools.o NeuralSystem/XORNeuralSystem.o main.o
+OBJ = CharDetector/CharBlockDetector.o UI/ui.o IMGtreatment/LoadIm.o NeuralSystem/NeuralTools.o NeuralSystem/XORNeuralSystem.o NeuralSystem/OCRNeuralSystem.o main.o
 DEP = ${OBJ:.o=.d}
 
 all: main

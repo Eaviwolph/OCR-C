@@ -5,7 +5,6 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
-
-int CharDetector(void);
-
+#include "../NeuralSystem/OCRNeuralSystem.h"
+int CharDetector(int lines, int columns, int image[lines][columns], char* torecognize, char* buffer);
 #endif

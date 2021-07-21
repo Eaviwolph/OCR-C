@@ -1,15 +1,14 @@
-#include "NeuralSystem/XORNeuralSystem.h"
 #include "IMGtreatment/LoadIm.h"
 #include "CharDetector/CharBlockDetector.h"
 #include "string.h"
+#include "UI/ui.h"
 
 void help()
 {
     printf("Usage: main [OPTION]\n");
     printf("Options:\n");
     printf("XOR -> XOR training\n");
-    printf("Image {File.bmp} -> Image tests\n");
-    printf("Cut -> Cuts matrix tests\n");
+    printf("OCR -> OCR system\n");
 }
 
 int main(int argc, char* argv[])
@@ -20,18 +19,14 @@ int main(int argc, char* argv[])
         {
             XORTrain();
         }
-        else if(strcmp(argv[1],"Cut") == 0)
+        else if(strcmp(argv[1],"OCR") == 0)
         {
-            CharDetector();
+            ui();
         }
         else
         {
             help();
         }
-    }
-    else if(argc == 3 && strcmp(argv[1],"Image") == 0)
-    {
-        IMGTreatment(argv[2]);
     }
     else
     {

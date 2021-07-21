@@ -1,42 +1,42 @@
 #ifndef XORNEURALSYSTEM_H
 #define XORNEURALSYSTEM_h
 
-#define INPUTS 2
-#define HIDDEN 5
-#define OUTPUT 1
+#define XORINPUTS 2
+#define XORHIDDEN 5
+#define XOROUTPUT 1
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <string.h>
 
-struct NeuralNetwork
+struct XORNeuralNetwork
 {
-
-    double WeightItoH[INPUTS*HIDDEN];
-    double dWeightItoH[INPUTS*HIDDEN];
-    double WeightHtoO[HIDDEN];
-    double dWeightHtoO[HIDDEN];
-
-    double BiasH[HIDDEN];
+    //Weights of each neurons
+    double WeightItoH[XORINPUTS*XORHIDDEN];
+    double dWeightItoH[XORINPUTS*XORHIDDEN];
+    double WeightHtoO[XORHIDDEN];
+    double dWeightHtoO[XORHIDDEN];
+    //Biases of each neurons
+    double BiasH[XORHIDDEN];
     double BiasO;
-
-    double ActH[HIDDEN];
-    double delta[HIDDEN];
+    //activations of each neurons and delta to apply
+    double ActH[XORHIDDEN];
+    double delta[XORHIDDEN];
     double ActO;
     double deltaO;
-
+    //learning rate
     double eta;
-    double alpha;
-
-    double Inputs[INPUTS*INPUTS*INPUTS];
-    double Out[INPUTS*INPUTS];
+    //XORINPUTS and desired Outputs
+    double Inputs[XORINPUTS*XORINPUTS*XORINPUTS];
+    double Out[XORINPUTS*XORINPUTS];
 };
 
 
 void XORTrain();
 double Random();
-double sigmoid(double z);
-double sigmoid_prime(double z);
+double Sigmoid(double z);
+double Sigmoid_prime(double z);
 
 #endif
