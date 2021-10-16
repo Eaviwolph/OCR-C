@@ -7,7 +7,7 @@ This project is compilable on Linux with sdl2 lib installed.
 To compile the project: $ make  
 To clean the project: $ make clean  
 
-.\main to start the project,  
+./main to start the project,  
 Usage: main [OPTION]  
 Options:  
 * XOR -> XOR training
@@ -24,7 +24,7 @@ Ce projet est compilable sur Linux avec la librairie sdl2 installée.
 Pour compiler le projet: $ make  
 Pour clean le projet : $make clean  
 
-.\main pour lancer le projet,  
+./main pour lancer le projet,  
 Usage: main [OPTION]  
 Options:  
 * XOR -> XOR training
