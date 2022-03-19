@@ -14,7 +14,7 @@ Options:
 * Image "File.bmp" -> Image tests
 * Cut -> Cuts matrix tests
 
-CharDetecor include the cutting managment of the picture  
+CharDetecor include the cutting management of the picture  
 IMGtreatment include the treatment of the picture  
 NeuralSystem include the neural network (xor for now)  
 
